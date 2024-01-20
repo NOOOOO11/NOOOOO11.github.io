@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('signupForm');
+    
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+    
+                fetch('http://localhost:3000/submit-form', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        memberFirstName: form.memberFirstName.value,
+                        memberLastName: form.memberLastName.value,
+                        parentFirstName: form.parentFirstName.value,
+                        parentLastName: form.parentLastName.value,
+                        memberAge: form.memberAge.value,
+                        parentEmail: form.parentEmail.value,
+                    }),
+                })
+                    .then(response => response.text())
+                    .then(message => {
+                        document.getElementById('confirmationMessage').innerHTML = message;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="memberFirstName">Member First Name:</label>
+            <input type="text" id="memberFirstName" name="memberFirstName" required>
+
+            <label for="memberLastName">Member Last Name:</label>
+            <input type="text" id="memberLastName" name="memberLastName" required>
+
+            <label for="parentFirstName">Parent First Name:</label>
+            <input type="text" id="parentFirstName" name="parentFirstName" required>
+
+            <label for="parentLastName">Parent Last Name:</label>
+            <input type="text" id="parentLastName" name="parentLastName" required>
+
+            <label for="memberAge">Member Age:</label>
+            <input type="number" id="memberAge" name="memberAge" required>
+
+            <label for="parentEmail">Parent Email:</label>
+            <input type="email" id="parentEmail" name="parentEmail" required>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+
+        <div id="confirmationMessage"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

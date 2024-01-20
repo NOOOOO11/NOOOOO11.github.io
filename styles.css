@@ -1,0 +1,104 @@
+/* styles.css */
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: black;
+    font-size: 70px;
+    font-weight: bold;
+    margin: 5px;
+    text-align: center; /* Center the heading */
+}
+
+p {
+    font-size: 20px;
+    max-width: 150%;
+    text-align: center;
+    margin: 0 auto; /* Center the paragraph */
+}
+
+header {
+    background-color: #7413DC;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.logo-container img {
+    width: 250px; /* Adjust the width as needed */
+    height: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.image-banner {
+    width: 100%;
+    height: auto;
+    background-image: url('images/tmp.png');
+    background-size: cover;
+    background-position: center;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#home {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow flex items to wrap on smaller screens */
+}
+
+.text-content {
+    max-width: 60%; /* Limit the width of the text content */
+    text-align: center;
+}
+
+.image-container {
+    max-width: 40%; /* Limit the width of the image container */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+button {
+    padding: 10px;
+    background-color: #00a794;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 350px;
+    font-size: larger;
+}
+button:hover {
+    background-color: #7413DC;
+}
+
