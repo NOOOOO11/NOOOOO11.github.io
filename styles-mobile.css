@@ -9,20 +9,21 @@ body {
 
 h1 {
     color: white;
-    font-size: 70px;
+    font-size: 50px;
     font-weight: bold;
     margin: 5px;
-    text-align: center; /* Center the heading */
+    text-align: left; /* Center the heading */
 }
 
-.purple{
+h1.purple{
     color: #7413DC;
+    font-size: 40px;
 }
 
 p {
     color: white;
     font-size: 20px;
-    max-width: 150%;
+    max-width: 100%;
     text-align: left;
     margin: 0 auto; /* Center the paragraph */
 }
@@ -44,6 +45,7 @@ header {
 nav {
     display: flex;
     align-items: center; /* Align items vertically */
+    width: 100%;
 }
 
 nav a {
@@ -81,7 +83,6 @@ footer {
 }
 
 .text-content {
-    max-width: 50%; /* Limit the width of the text content */
     text-align: left;
 }
 
@@ -160,3 +161,9 @@ ul li a.files {
 
 /* Your existing styles below this line */
 /* ... */
+/* Add these styles for the modern look */
+.big_image {
+    display: none;
+}
+
+

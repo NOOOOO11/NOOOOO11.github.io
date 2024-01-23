@@ -4,6 +4,34 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+header {
+    background-color: #7413DC;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+nav {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+footer {
+    background-color:#f4f4f4;
+    color: #000;
+    text-align: center;
+    padding: 1em;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+}
 
 .container {
     max-width: 400px;
@@ -26,7 +54,7 @@ label {
 
 button {
     padding: 10px;
-    background-color: #007bff;
+    background-color: #7413dc;
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -34,5 +62,5 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #00a794;
 }
